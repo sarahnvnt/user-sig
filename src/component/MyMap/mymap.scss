@@ -1,0 +1,39 @@
+.MyMap {
+  flex: 8;
+  z-index: 1;
+  position: relative;
+
+  .legend {
+    width: 155px;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+
+    .title {
+      text-align: center;
+    }
+
+    .colorInfo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      text-align: left;
+
+      .color {
+        width: 30px;
+        height: 17px;
+      }
+    }
+
+    .provInfo {
+      font-size: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: #2d6161;
+  position: sticky;
+  top: 0;
+  padding: 0 5%;
+  z-index: 999;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.107);
+  // border-bottom: 2px solid whitesmoke;
+
+  .logo {
+    text-transform: capitalize;
+    font-weight: bold;
+    flex: 1;
+    letter-spacing: 2px;
+  }
+
+  .menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  li {
+    list-style: none;
+
+    &#active {
+      a {
+        color: #cd8838;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+
+    &:hover {
+      color: #cd8838;
+    }
+  }
+
+  .toggler {
+    cursor: pointer;
+    display: none;
+
+    div {
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background: #ffffff; // slide
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translateY(11px);
+    }
+
+    .line3 {
+      transform: rotate(45deg) translateY(-12px);
+    }
+
+    .line2 {
+      opacity: 0;
+    }
+
+    // .line1 {
+    //     transform: rotate(-45deg) translate(-7px, 5px);
+    // }
+
+    // .line3 {
+    //     transform: rotate(45deg) translate(-6px, -5px);
+    // }
+
+    // .line2 {
+    //     opacity: 0;
+    // }
+  }
+
+  @media screen and (max-width: 768px) {
+    .toggler {
+      display: block;
+    }
+
+    .menu {
+      position: fixed;
+      top: 50px;
+      right: 0;
+      width: 50%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 20px;
+      font-size: 1.2rem;
+      margin: 0;
+      z-index: 999999;
+      transform: translateX(100%);
+      transition: 0.2s ease-in;
+
+      a {
+        color: white;
+      }
+    }
+
+    .active {
+      transform: translateX(0);
+
+      background-color: #2d6161;
+    }
+
+    &.active {
+      background: #2d6161;
+
+      a {
+        color: white;
+      }
+
+      .toggler {
+        div {
+          background-color: white;
+        }
+      }
+    }
+  }
+}

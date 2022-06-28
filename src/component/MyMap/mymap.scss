@@ -3,20 +3,28 @@
   z-index: 1;
   position: relative;
 
-  .legend {
+  .keterangan {
     width: 155px;
     position: absolute;
-    background-color: white;
-    right: 0;
-    top: 0;
+    background-color: #f5f0e3;
+    border-radius: 7px;
+    border: 5px;
+    margin: 5px;
+    bottom: 16px;
+    right: 16px;
+    // font-size: 18px;
+    // right: 0;
+    // top: 0;
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     z-index: 2;
 
-    .title {
+    .tittle {
       text-align: center;
+      font-style: bold;
+      // text-shadow: aqua;
     }
 
     .colorInfo {
@@ -27,13 +35,14 @@
       text-align: left;
 
       .color {
-        width: 30px;
+        width: 20px;
         height: 17px;
+        border-radius: 5px;
       }
     }
 
-    .provInfo {
-      font-size: 0.7rem;
+    .infoProv {
+      font-size: 0.6rem;
     }
   }
 }

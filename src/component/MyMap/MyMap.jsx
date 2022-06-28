@@ -52,7 +52,8 @@ const MyMap = ({ setProvince }) => {
 
   const countryStyle = {
     color: "black",
-    weight: 1,
+    weight: 1, // ketebalan peta
+    fillOpacity: 2, //buat warna makin cerah
   };
 
   const onEachCountry = (country, layer) => {
@@ -69,6 +70,16 @@ const MyMap = ({ setProvince }) => {
     layer.on("click", function (e) {
       setProvince(country.properties.provinceId);
     });
+    layer.on("mouseover", function (e) {
+      e.target.setStyle({
+        fillOpacity: 0.5,
+      });
+    });
+    layer.on("mouseout", function (e) {
+      e.target.setStyle({
+        fillOpacity: 2,
+      });
+    });
   };
 
   // console.log(mapData);
@@ -77,32 +88,32 @@ const MyMap = ({ setProvince }) => {
   return (
     <div className="MyMap">
       <MapContainer
-        center={[-0.789275, 113.921326]}
+        center={[-0.789275, 117.921326]}
         zoom={5}
         scrollWheelZoom={false}
         style={{ height: "100%", zIndex: 1 }}
       >
         {provinces.length > 0 && (
-          <GeoJSON
-            style={countryStyle}
-            data={provinces.map((map) => map.geojson)}
-            onEachFeature={onEachCountry}
-          />
+          <>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <GeoJSON
+              style={countryStyle}
+              data={provinces.map((map) => map.geojson)}
+              onEachFeature={onEachCountry}
+            />
+          </>
         )}
-
-        {/* <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        /> */}
-        {/* <GeoJSON data={data}></GeoJSON> */}
         {provinces.map((data) => (
           <Marker
             position={[data.lat, data.long]}
             icon={
               new Icon({
                 iconUrl: markerIconPng,
-                iconSize: [25, 41],
-                iconAnchor: [12, 41],
+                iconSize: [18, 31],
+                iconAnchor: [10, 31],
               })
             }
             eventHandlers={{
@@ -121,8 +132,8 @@ const MyMap = ({ setProvince }) => {
         ))}
       </MapContainer>
       {calc.high && (
-        <div className="legend">
-          <div className="title">Klasifikasi</div>
+        <div className="keterangan">
+          <div className="tittle">Keterangan</div>
           <div className="colorInfo">
             <div className="color" style={{ background: "green" }}></div>
             <div>{" > " + Math.floor(calc.high) + " (Jumlah Tinggi)"}</div>
@@ -140,9 +151,15 @@ const MyMap = ({ setProvince }) => {
             <div className="color" style={{ background: "red" }}></div>
             <div>{" < " + Math.floor(calc.low) + " (Jumlah Sedikit)"}</div>
           </div>
-          <div className="provInfo">Provinsi tinggi : {calc.highProvince}</div>
-          <div className="provInfo">Provinsi sedang : {calc.midProvince}</div>
-          <div className="provInfo">Provinsi sedikit : {calc.lowProvince}</div>
+          <div className="infoProv">
+            Provinsi Ritus tinggi : {calc.highProvince}
+          </div>
+          <div className="infoProv">
+            Provinsi Ritus sedang : {calc.midProvince}
+          </div>
+          <div className="infoProv">
+            Provinsi Ritus sedikit : {calc.lowProvince}
+          </div>
         </div>
       )}
     </div>

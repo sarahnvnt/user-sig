@@ -21,7 +21,7 @@ function App() {
             <Route path="PetaRitus" element={<PetaRitus />} />
             <Route path="DataRitus">
               <Route index element={<DataRitus />} />
-              <Route path="detail" element={<Detail />} />
+              <Route path=":cultureId" element={<Detail />} />
             </Route>
           </Route>
         </Routes>

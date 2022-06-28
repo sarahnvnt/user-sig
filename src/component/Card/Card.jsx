@@ -2,11 +2,12 @@ import React from "react";
 import "./card.scss";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import AppRegistrationRoundedIcon from "@mui/icons-material/AppRegistrationRounded";
 // import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 const Card = ({ culture }) => {
   return (
-    <div className="detail">
+    <div className="card">
       <div className="item">
         <img
           className="img"
@@ -14,27 +15,31 @@ const Card = ({ culture }) => {
             culture.img ===
               "https://warisanbudaya.kemdikbud.go.id/dashboard/media/photos/" ||
             !culture.img
-              ? "https://dpwfkdtjabar.com/assets/images/artikel/no-image.png"
+              ? "https://www.kushi-hyoutan.jp/wp-content/themes/keni8-child/images/no-image.jpg"
               : culture.img
           }
           alt=""
         />
-        <div className="detailCategory">
+        <div className="kategori">
           <div className="title">{culture.name}</div>
           {/* <p className="desc">{culture.desc}</p> */}
         </div>
         <div className="info">
-          <div className="detailCat">
+          <div className="detailket">
             <CalendarTodayIcon className="icon" />
             {culture.year ? culture.year : "-"}
           </div>
-          <div className="detailCat">
+          <div className="detailket">
             <LocationOnIcon className="icon" />
             {culture.province.name ? culture.province.name : "-"}
           </div>
+          <div className="detailket">
+            <AppRegistrationRoundedIcon className="icon" />
+            {culture.type ? culture.type : "-"}
+          </div>
 
           <div className="bottom">
-            <a className="buttonRead" href={`/detail/${culture._id}`}>
+            <a className="buttonDesc" href={`/DataRitus/${culture._id}`}>
               Lihat Deskripsi
             </a>
           </div>

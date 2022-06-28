@@ -21,15 +21,15 @@ const Datatable = ({ list, columns }) => {
     {
       field: "action",
       headerName: "Action",
-      width: 200,
+      width: 150,
       renderCell: (params) => {
         return (
           <div className="cellAction">
             <Link
-              to={`/detail/${params.row._id}`}
+              to={`/DataRitus/${params.row._id}`}
               style={{ textDecoration: "none" }}
             >
-              <div className="viewButton">View</div>
+              <div className="viewButton">View Ritus</div>
             </Link>
           </div>
         );
@@ -44,8 +44,8 @@ const Datatable = ({ list, columns }) => {
         getRowId={(row) => row._id}
         rows={list}
         columns={columns.concat(actionColumn)}
-        pageSize={9}
-        rowsPerPageOptions={[9]}
+        pageSize={20}
+        rowsPerPageOptions={[10]}
         // checkboxSelection
       />
     </div>

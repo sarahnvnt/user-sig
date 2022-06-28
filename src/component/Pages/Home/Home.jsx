@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../Navbar/Navbar";
 //import Footer from "../Footer/Footer.js";
 import Content from "../../Content/Content";
+import "./home.scss";
 
 const Home = () => {
   return (

@@ -1,11 +1,10 @@
 .dataritus {
-  display: flex;
   .list {
     flex: 3;
     height: 100%;
     overflow-y: auto;
     position: relative;
-    background-color: #e6fffa;
+
     transition: 0.4s all ease-in;
     min-width: 350px;
 
@@ -21,18 +20,18 @@
       top: 0;
       gap: 10px;
 
-      .search {
+      .searchritus {
         display: flex;
         align-items: center;
         justify-content: space-between;
         border: 0.5px solid lightgray;
         width: 50%;
         border-radius: 5px;
-        padding: 3px;
+        padding: 5px;
         cursor: pointer;
 
         &:hover {
-          border: 0.5px solid black;
+          border: 0.5px solid #cd8838;
         }
 
         input {
@@ -53,41 +52,26 @@
         padding: 3px;
       }
 
-      .filters {
+      .filter {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 7px;
-
-        // .reset {}
       }
-    }
+      .Buttonreset {
+        border-radius: 3px;
+        padding: 6px;
+        color: #243f4d;
+        border: 0.5px solid #2d6161;
+        background-color: #9db6b5;
+        gap: 7px;
+        // width: 5px;
+        // height: 20px;
 
-    .card-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      padding: 10px 10px 20px 10px;
-      gap: 20px;
-    }
-
-    &::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    &::-webkit-scrollbar-track {
-      // border-radius: 8px;
-      background-color: rgba(12, 96, 107, 0.118);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      height: 56px;
-      // border-radius: 8px;
-      // border: 4px solid transparent;
-      // background-clip: content-box;
-      background-color: #888;
-      border-radius: 5px;
+        &:hover {
+          border: 0.5px solid #cd8838;
+        }
+      }
     }
   }
 }

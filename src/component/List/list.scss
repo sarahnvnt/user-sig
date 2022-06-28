@@ -19,7 +19,7 @@
     top: 0;
     gap: 10px;
 
-    .search {
+    .searchmap {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -30,7 +30,7 @@
       cursor: pointer;
 
       &:hover {
-        border: 0.5px solid #000000;
+        border: 0.5px solid #cd8838;
       }
 
       input {
@@ -51,7 +51,7 @@
       padding: 3px;
     }
 
-    .filters {
+    .filter {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -67,13 +67,16 @@
 
   .Breset {
     border-radius: 3px;
-    padding: 5px;
-    border: 0.5px solid #dfc7bf;
-    //background-color: #dfc7bf;
+    padding: 6px;
+    color: #243f4d;
+    border: 0.5px solid #2d6161;
+    background-color: #9db6b5;
     gap: 7px;
+    // width: 5px;
+    // height: 20px;
 
     &:hover {
-      border: 0.5px solid #000000;
+      border: 0.5px solid #cd8838;
     }
   }
 

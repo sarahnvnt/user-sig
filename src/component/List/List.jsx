@@ -89,7 +89,7 @@ const List = ({ province, setProvince }) => {
   return (
     <div className="list">
       <div className="top">
-        <div className="search">
+        <div className="searchmap">
           <input
             type="text"
             value={inputSearch}
@@ -98,7 +98,7 @@ const List = ({ province, setProvince }) => {
           />
           <SearchOutlinedIcon className="icon" />
         </div>
-        <div className="filters">
+        <div className="filter">
           <SelectFilter
             options={provinces}
             label="Province"
@@ -113,7 +113,7 @@ const List = ({ province, setProvince }) => {
           />
 
           <button className="Breset" onClick={reset}>
-            reset
+            Reset
           </button>
           {/* <SelectFilter answer={answer} setAnswer={setAnswer} /> */}
         </div>

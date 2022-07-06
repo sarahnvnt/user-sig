@@ -25,7 +25,8 @@ const Navbar = () => {
   return (
     <nav className={active ? "navbar active" : "navbar"}>
       <div className="logo">
-        <a href="/">SIG - Ritus</a>
+        {/* <img src="../../../public/Logo.png" alt="" className="avatar" /> */}
+        <a href="/">Ritus</a>
       </div>
       <ul className={active ? "menu active" : "menu"}>
         {navbarData.map((item, key) => (

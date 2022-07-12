@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.scss";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import TodayRoundedIcon from "@mui/icons-material/TodayRounded";
 import AppRegistrationRoundedIcon from "@mui/icons-material/AppRegistrationRounded";
 // import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
@@ -26,7 +26,7 @@ const Card = ({ culture }) => {
         </div>
         <div className="info">
           <div className="detailket">
-            <CalendarTodayIcon className="icon" />
+            <TodayRoundedIcon className="icon" />
             {culture.year ? culture.year : "-"}
           </div>
           <div className="detailket">
@@ -35,8 +35,12 @@ const Card = ({ culture }) => {
           </div>
           <div className="detailket">
             <AppRegistrationRoundedIcon className="icon" />
-            {culture.type ? culture.type : "-"}
+            {culture.reg_num ? culture.reg_num : "-"}
           </div>
+          {/* <div className="detailket">
+            <AppRegistrationRoundedIcon className="icon" />
+            {culture.type ? culture.type : "-"}
+          </div> */}
 
           <div className="bottom">
             <a className="buttonDesc" href={`/DataRitus/${culture._id}`}>

@@ -1,10 +1,11 @@
 .dataritus {
   .list {
     flex: 3;
-    height: 100%;
+    height: 100px;
     overflow-y: auto;
     position: relative;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: 0.4s all ease-in;
     min-width: 350px;
 

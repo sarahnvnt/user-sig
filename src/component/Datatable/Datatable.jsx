@@ -36,6 +36,7 @@ const Datatable = ({ list, columns }) => {
       },
     },
   ];
+
   return (
     <div className="datatable">
       <div className="datatableTitle"></div>
@@ -43,6 +44,7 @@ const Datatable = ({ list, columns }) => {
         className="datagrid"
         getRowId={(row) => row._id}
         rows={list}
+        // rowsHeight={80}
         columns={columns.concat(actionColumn)}
         pageSize={20}
         rowsPerPageOptions={[10]}

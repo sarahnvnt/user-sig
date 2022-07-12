@@ -7,12 +7,16 @@ const Content = () => {
       <div className="left">
         <h1> Ritus </h1>
         <p>
-          Ritus adalah tata cara pelaksanaan suatu upacara atau kegiatan menurut
-          nilai-nilai tertentu, yang dilakukan secara terus menerus oleh
-          kelompok masyarakat dan diwariskan kepada generasi berikutnya dengan
-          berbagai macam perayaan, diantaranya berbagai hari raya, peringatan
-          kelahiran, upacara pernikahan, upacara kematian, dan upacara
-          kepercayaan dan perlengkapannya dalam melakukan ritus tersebut.
+          Ritus adalah tata cara pelaksanaan suatu upacara yang dilakukan secara
+          terus menerus oleh kelompok masyarakat dan diwariskan kepada generasi
+          berikutnya dengan berbagai macam perayaan, seperti perayaan hari raya,
+          peringatan kelahiran, upacara pernikahan, upacara kematian, dan
+          upacara kepercayaan dan perlengkapannya dalam melakukan ritus
+          tersebut. Sistem Informasi Geografis berbasis website ini merupakan
+          aplikasi yang dapat diakses oleh masyarakat umum untuk mendapatkan
+          informasi kebudayaan ritus di masing-masing provinsi di Indonesia
+          serta menyajikan informasi- informasi mengenai ritus dengan lebih
+          menarik dan tidak dalam bentuk textual saja.
         </p>
         <a href="/PetaRitus">
           <button>Lihat Peta</button>

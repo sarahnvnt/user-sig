@@ -119,20 +119,20 @@ const DataRitus = () => {
         return params.row.reg_num || "-";
       },
     },
-    {
-      field: "type",
-      headerName: "Type",
-      minWidth: 100,
-      flex: 1,
+    // {
+    //   field: "type",
+    //   headerName: "Type",
+    //   minWidth: 100,
+    //   flex: 1,
 
-      renderCell: (params) => {
-        return params.row.type || "-";
-      },
-    },
+    //   renderCell: (params) => {
+    //     return params.row.type || "-";
+    //   },
+    // },
     {
       field: "year",
       headerName: "Tahun",
-      minWidth: 100,
+      minWidth: 50,
       flex: 1,
       renderCell: (params) => {
         return params.row.year || "-";
@@ -162,7 +162,7 @@ const DataRitus = () => {
     {
       field: "desc",
       headerName: "Deskripsi",
-      minWidth: 200,
+      minWidth: 250,
       flex: 1,
       renderCell: (params) => {
         return params.row.desc || "-";
@@ -180,7 +180,7 @@ const DataRitus = () => {
               type="text"
               value={inputSearch}
               onChange={(e) => setInputSearch(e.target.value)}
-              placeholder="Cari Data Ritus..."
+              placeholder="Cari Nama Ritus..."
             />
             <SearchOutlinedIcon className="icon" />
           </div>

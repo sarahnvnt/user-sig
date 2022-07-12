@@ -86,7 +86,7 @@ const MyMap = ({ setProvince }) => {
   let data = dataPeta.map((map) => map.geojson);
 
   return (
-    <div className="MyMap">
+    <div className="Map">
       <MapContainer
         center={[-0.789275, 117.921326]}
         zoom={5}

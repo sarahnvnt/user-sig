@@ -24,6 +24,9 @@ const Content = () => {
         <a href="/DataRitus">
           <button>Lihat Data Ritus</button>
         </a>
+        <a href="https://admin-sig-ritus.vercel.app/login">
+          <button>Login As Admin?</button>
+        </a>
       </div>
       <div className="right">
         <img src="https://www.tripbaligo.com/wp-content/uploads/2020/09/149-Converted.png"></img>

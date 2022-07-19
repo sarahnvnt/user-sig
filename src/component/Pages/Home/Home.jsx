@@ -8,7 +8,9 @@ const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      <h1 style={{ textAlign: "center" }}>Sistem Informasi Geografis</h1>
+      <h1 style={{ textAlign: "center" }}>
+        Sistem Informasi Geografis Ritus di Indonesia
+      </h1>
       <Content />
     </div>
   );

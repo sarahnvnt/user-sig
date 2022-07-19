@@ -40,6 +40,9 @@ const Navbar = () => {
             </a>
           </li>
         ))}
+        <a href="https://admin-sig-ritus.vercel.app/login">
+          <button>Login As Admin?</button>
+        </a>
       </ul>
 
       <div
@@ -49,6 +52,7 @@ const Navbar = () => {
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>
+        <div className="line4"></div>
       </div>
     </nav>
   );

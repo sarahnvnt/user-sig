@@ -211,6 +211,7 @@ const DataRitus = () => {
           </div>
         </div>
       </div>
+      {/* <h3>List Data Ritus di Indonesia</h3> */}
       <Datatable list={list} columns={provinceColumns} />
     </div>
   );

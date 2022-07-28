@@ -2,17 +2,14 @@ import "./list.scss";
 import React, { useEffect, useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import SelectFilter from "../Selectfilter/Selectfilter";
-//import provinces from "../../../src/data/Indonesia.json";
-//import ritus from "../../../src/data/ritus.json";
 import Card from "../Card/Card";
 import { publicRequest } from "../../requestMethods";
 import { tahun } from "../../utils/naming";
 import CircularProgress from "@mui/material/CircularProgress";
 
 const List = ({ province, setProvince }) => {
-  // const [province, setProvince] = useState("");
   const [year, setYear] = useState("");
-  const [inputSearch, setInputSearch] = useState("");
+  const [inputSearch, setInputSearch] = useState(""); // menyimpan dan mengubah set input pada seacrh
   const [list, setList] = useState([]);
   const [provinces, setProvinces] = useState([]);
   const [cultures, setCultures] = useState([]);
@@ -21,7 +18,7 @@ const List = ({ province, setProvince }) => {
   useEffect(() => {
     const getAllProvinces = async () => {
       try {
-        const res = await publicRequest.get(`/provinces`);
+        const res = await publicRequest.get(`/provinces`); // mengambil data list provinsi dengan get
         setProvinces(res.data);
       } catch (err) {}
     };
@@ -32,7 +29,7 @@ const List = ({ province, setProvince }) => {
     const getAllCultures = async () => {
       setIsLoading(true);
       try {
-        const res = await publicRequest.get(`/cultures`);
+        const res = await publicRequest.get(`/cultures`); // mengambil data list culture dengan get
         setList(res.data);
         setCultures(res.data);
         if (res) {
@@ -62,6 +59,7 @@ const List = ({ province, setProvince }) => {
   };
 
   useEffect(() => {
+    //untuk effect / filter pada peta
     const applyFilters = () => {
       let updatedList = cultures;
 

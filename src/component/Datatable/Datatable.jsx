@@ -29,7 +29,7 @@ const Datatable = ({ list, columns }) => {
               to={`/DataRitus/${params.row._id}`}
               style={{ textDecoration: "none" }}
             >
-              <div className="viewButton">View Ritus</div>
+              <div className="viewButton">Lihat Deskrip</div>
             </Link>
           </div>
         );

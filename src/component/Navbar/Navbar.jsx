@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
         ))}
         <a href="https://admin-sig-ritus.vercel.app/login">
-          <button>Login As Admin?</button>
+          <button>Login</button>
         </a>
       </ul>
 

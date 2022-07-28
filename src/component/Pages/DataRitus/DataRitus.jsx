@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Navbar/Navbar.jsx";
-//import Footer from "../Footer/Footer.js";
 import Datatable from "../../Datatable/Datatable.jsx";
-//import React, { useEffect, useState } from "react";
-//import Ritus from "../DataRitus/Ritus";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import SelectFilter from "../../Selectfilter/Selectfilter";
-//import provinces from "../../../data/Indonesia.json";
-// import ritus from "../../../data/ritus.json";
 import { publicRequest } from "../../../requestMethods.js";
 import CircularProgress from "@mui/material/CircularProgress";
 import { tahun } from "../../../utils/naming.js";
@@ -111,7 +106,7 @@ const DataRitus = () => {
     // { field: "_id", headerName: "ID", minWidth: 100, flex: 1 },
     {
       field: "reg_num",
-      headerName: "No. Regist",
+      headerName: "No. Registrasi",
       minWidth: 100,
       flex: 1,
 

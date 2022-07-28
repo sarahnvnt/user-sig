@@ -63,10 +63,10 @@ const Detail = () => {
               {culture?.province?.name || "-"}
             </div>
             <div className="infodetail">{"No. " + culture?.reg_num || "-"}</div>
-            <div className="infodetail">
+            {/* <div className="infodetail">
               Tipe:
               {" " + culture?.type || "-"}
-            </div>
+            </div> */}
           </div>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs value={value} onChange={handleChange}>
@@ -118,21 +118,3 @@ const Detail = () => {
 };
 
 export default Detail;
-// import React from "react";
-// import Navbar from "../../Navbar/Navbar";
-// //import Footer from "../Footer/Footer.js";
-// import Desc from "../../Desc/Desc";
-// import "./detail.scss";
-
-// const Detail = () => {
-//   return (
-//     <div className="home">
-//       <Navbar />
-//       <h1>Upacara Tawur Kesanga Yogyakarta </h1>
-//       <h4> Pencatatan - Data Ritus 2015 </h4>
-//       <Desc />
-//     </div>
-//   );
-// };
-
-// export default Detail;

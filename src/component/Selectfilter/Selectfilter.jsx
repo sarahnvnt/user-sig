@@ -31,10 +31,6 @@ const SelectFilter = ({ options, value, setValue, label }) => {
           : options.map((option) => (
               <MenuItem value={option.value}>{option.label}</MenuItem>
             ))}
-        {/* <MenuItem value={1}>Sulawesi Tenggaraaaaaaaa</MenuItem>
-                <MenuItem value={2}>Jawa Barat</MenuItem>
-                <MenuItem value={3}>Option 3</MenuItem>
-                <MenuItem value={4}>Option 4</MenuItem> */}
       </Select>
     </FormControl>
   );

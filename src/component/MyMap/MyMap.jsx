@@ -3,7 +3,6 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from "react-leaflet";
 import "./mymap.scss";
 import { Icon } from "leaflet";
-//import { icon } from "leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethods";
@@ -19,7 +18,7 @@ const MyMap = ({ setProvince }) => {
         const provinceData = await publicRequest.get(`/provinces`);
         console.log(provinceData);
         const calcData = await publicRequest.get(`/cultures/calculate`);
-        setProvinces(mergeProvincesTotal(provinceData.data, totalData.data));
+        setProvinces(mergeProvincesTotal(provinceData.data, totalData.data)); // ngebungin jumlah total provinsi dan data gjson
         setCalc(calcData.data);
       } catch (err) {}
     };
@@ -42,7 +41,7 @@ const MyMap = ({ setProvince }) => {
           properties: {
             ...province.geojson.properties,
             provinceId: totalTemp?._id || "",
-            total: totalTemp?.count || 0,
+            total: totalTemp?.count || 0, // total jumlah budaya pada provinsinya
           },
         },
       };
@@ -59,8 +58,10 @@ const MyMap = ({ setProvince }) => {
   const onEachCountry = (country, layer) => {
     if (country.properties.total) {
       if (country.properties.total >= calc.high) {
+        //batas atas
         layer.options.fillColor = "green";
       } else if (country.properties.total <= calc.low) {
+        // warna layer batas bawah
         layer.options.fillColor = "red";
       } else {
         layer.options.fillColor = "yellow";
@@ -82,15 +83,12 @@ const MyMap = ({ setProvince }) => {
     });
   };
 
-  // console.log(mapData);
-  let data = dataPeta.map((map) => map.geojson);
-
   return (
     <div className="Map">
       <MapContainer
-        center={[-0.789275, 117.921326]}
+        center={[-0.789275, 117.921326]} //center petanya
         zoom={5}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         style={{ height: "100%", zIndex: 1 }}
       >
         {provinces.length > 0 && (
@@ -101,14 +99,14 @@ const MyMap = ({ setProvince }) => {
             />
             <GeoJSON
               style={countryStyle}
-              data={provinces.map((map) => map.geojson)}
-              onEachFeature={onEachCountry}
+              data={provinces.map((map) => map.geojson)} //Setiap prov memiliki gjson yang gjsonnya aja
+              onEachFeature={onEachCountry} //pada tiap feature maka fungsi oneach feature akan jalan
             />
           </>
         )}
         {provinces.map((data) => (
           <Marker
-            position={[data.lat, data.long]}
+            position={[data.lat, data.long]} // marker pada setiap provinsi
             icon={
               new Icon({
                 iconUrl: markerIconPng,

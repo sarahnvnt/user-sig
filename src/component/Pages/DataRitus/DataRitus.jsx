@@ -4,7 +4,7 @@ import Datatable from "../../Datatable/Datatable.jsx";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import SelectFilter from "../../Selectfilter/Selectfilter";
 import { publicRequest } from "../../../requestMethods.js";
-import CircularProgress from "@mui/material/CircularProgress";
+// import CircularProgress from "@mui/material/CircularProgress";
 import { tahun } from "../../../utils/naming.js";
 import "./dataritus.scss";
 

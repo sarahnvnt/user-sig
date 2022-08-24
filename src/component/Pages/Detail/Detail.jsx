@@ -26,11 +26,11 @@ const Detail = () => {
     "https://www.99.co/blog/indonesia/wp-content/uploads/2020/11/egrang.jpg",
     "https://www.99.co/blog/indonesia/wp-content/uploads/2020/11/egrang.jpg",
   ];
-  const videos = [
-    "https://www.youtube.com/embed/D4jq5Bd9bTA",
-    "https://www.youtube.com/embed/D4jq5Bd9bTA",
-    "https://www.youtube.com/embed/D4jq5Bd9bTA",
-  ];
+  // const videos = [
+  //   "https://www.youtube.com/embed/D4jq5Bd9bTA",
+  //   "https://www.youtube.com/embed/D4jq5Bd9bTA",
+  //   "https://www.youtube.com/embed/D4jq5Bd9bTA",
+  // ];
 
   useEffect(() => {
     const getAllCultures = async () => {
@@ -103,12 +103,12 @@ const Detail = () => {
               "Belum ada foto-foto tentang Ritus ini"
             )
           ) : (
-            <div className="videoContainer">
-              {culture.videos.length > 0
+            <div className="">
+              {/* {culture.videos.length > 0
                 ? culture?.videos.map((video) => (
                     <iframe width="320" height="215" src={video}></iframe>
                   ))
-                : "Belum ada video tentang Ritus ini"}
+                : "Belum ada video tentang Ritus ini"} */}
             </div>
           )}
         </div>

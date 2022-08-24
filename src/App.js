@@ -8,6 +8,7 @@ import Home from "./component/Pages/Home/Home";
 import DataRitus from "./component/Pages/DataRitus/DataRitus";
 import PetaRitus from "./component/Pages/PetaRitus/PetaRitus";
 import Detail from "./component/Pages/Detail/Detail";
+import PetaDinamis from "./component/Pages/PetaDinamis/PetaDinamis";
 //import Budaya from "./components/Pages/Budaya";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="Home" element={<Home />} />
             <Route path="PetaRitus" element={<PetaRitus />} />
+            <Route path="dynamic" element={<PetaDinamis />} />
             <Route path="DataRitus">
               <Route index element={<DataRitus />} />
               <Route path=":cultureId" element={<Detail />} />

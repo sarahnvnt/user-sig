@@ -5,7 +5,7 @@ import Navbar from "../../Navbar/Navbar";
 import List from "../../List/List";
 
 const PetaRitus = () => {
-  const [province, setProvince] = useState("");
+  const [province, setProvince] = useState(""); //untuk mengubah dan menyimpan nilai
   return (
     <>
       <Navbar />
